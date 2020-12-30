@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        var count = 0;
+        function start() {
+            count++;
+            document.getElementById("txt").innerHTML = count;
+            t = setTimeout("start()", 500);
+        }
+    </script>
+    <label id="txt">0</label>
+    <input type="button" id="btnTest" onclick="start()" value="Start" />
+
+    <!--<script language="javascript" type="text/javascript">
+        var count = 0;
+        function TestFunction()
+        {
+            count++;
+            document.getElementById("lblText").innerHTML = count;
+            t = setTimeout("TestFunction()", 1000);
+        }
+    </script>
+
+    <label id="lblText">0</label> 
+    <input type="button" id="btnTest" onclick="TestFunction()" value="Click me" />-->
+
+
+</body>
+</html>

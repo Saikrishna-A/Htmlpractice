@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script language="javascript" type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+      
+       <!--/* p {
+            color: aqua;
+            border: dotted 5px green;
+            padding: 4px;
+            margin-top: 4px;
+            background: red;
+        }
+        body {
+            background-image: url(image1.jpeg);
+          
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+        }
+       */-->
+    <script>
+        $(document).ready(function () {
+
+            $(".class1").css("border", "2px solid red");
+            //$("p").click(function () {
+            //    $(this).hide();
+
+            //});
+            $("#button1").click(function ()
+            {
+                $("p").fadetoggle(2000);
+            });
+            //$("#button2").click(function ()
+            //{
+            //    $("p").show(2000);
+            //});
+        });
+    </script>
+</head>
+<body>
+    
+        <p class="class1">Hello Every one </p>
+    <p>This is implementation of this and hide tage functions in jquery</p>
+    <p>
+        This is implementation hiding the paragraphs in jquery
+    </p>
+    <button id="button1">Toggle</button>
+    <button id="button2"> show</button>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script language="javascript" type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div id="divScroll">manupluations is </div><br />
+    <p id="Event" style="height:200px;width:300px;background-color:yellowgreen">eventX and eventY </p>
+    <p class="class1">Hello Every one </p>
+    <p>This is implementation of this and hide tage functions in jquery</p>
+    <p>
+        This is implementation hiding the paragraphs in jquery
+    </p>
+    <button id="button1">hide</button>
+    <button id="button3">show</button>
+    <button id="button2"> unbind</button>
+    <input type="text" id="txt" name="txt" />
+    <button id="btnajaxs">usingajax</button>
+    Result:<div id="divres"></div>
+    <input type="button" id="btnStart" value="Start" />
+    <input type="button" id="btnStop" value="Stop" />
+    <div id="divStop" style="height: 50px; width: 50px; background: brown;
+left: 300px;position: absolute; display:none ;"></div><br />
+    <input type="button" id="btnDequeue" value="Dequeue Demo" />
+    <div id="divDequeue" style="height: 50px; width: 50px; background: red;
+left: 0px; display: none; position: absolute;"> </div><br />
+
+    <input type="button" id="btnFxOff" value="Toggle Animation" />
+
+
+
+    <script language="javascript" type="text/javascript">
+        $(function () {
+
+            alert($("#divScroll").scrollLeft());
+            $("#divScroll").scrollLeft("100");
+            var position = $("#Event").position();
+            alert(position.left + " : " + position.top);
+            $(".class1").css("border", "2px solid green");
+
+            $("#button1").click(function () {
+                $("p").hide();
+            });
+            $("#button3").click(function () {
+                $("p").show();
+            });
+
+            $("#button2").click(function () {
+                $(".class1").html("<b>changed html</b>")
+            });
+
+            $("#txt").blur(function () {
+                alert("blur handled called")
+            });
+
+            $("#Event").bind("mousemove", function (e) {
+                $(this).text("textX:" + e.pageX + "textX:" + e.pageX);
+            });
+            $("#button2").click(function () {
+                $("#Event").unbind("mousemove")
+            });
+            $("btnajax").click(function () {
+                $ajax({
+                    type: "POST",
+                    url: " ajaxtype.cs",
+                    data: "a=5 &b=6",
+                    success: function (msg) {
+                        $("#divres").text(msg);
+                    }
+                });
+            });
+
+            $("#btnStart").click(function () {
+                $("#divStop").show("slow");
+                $("#divStop").animate({ width: '+=200px' }, 3000);
+                $("#divStop").animate({ width: '-=200px' }, 1500);
+            });
+            $("#btnStop").click(function () {
+                $("#divStop").stop();
+            });
+
+            $("#btnDequeue").click(function () {
+                $("#divDequeue").show("fast");
+                $("#divDequeue").fadeOut("slow");
+                $("#divDequeue").fadeIn("slow");
+                $("#divDequeue").queue(function () {
+                    $("#divDequeue").animate({ top: '+=200px' }, 2000);
+                    $(this).dequeue();
+                });
+                $("#divDequeue").animate({ left: '+200px' }, 2000);
+            });
+
+            $("#btnFxOff").click(function () {
+                $.fx.off = !$.fx.off;
+            });
+            
+        });
+    </script>
+
+</body>
+</html>

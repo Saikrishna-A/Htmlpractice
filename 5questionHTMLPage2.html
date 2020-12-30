@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function callfunction() {
+            var a = confirm("ok");
+           return a;
+            
+        }
+    </script>
+    <fieldset >
+        <legend>LOGIN FORM</legend>
+
+        <form action="https://www.tollplus.com/" method="post">
+            User Name:<input type="text" name="txt" id="txt"  /> <br />
+            Password:<input type="password" name="password" id="password" /><br />
+            <input type="submit" name="btn" value="confirm" onclick=" return callfunction()" />
+        </form>
+    </fieldset>
+    </body>
+</html>

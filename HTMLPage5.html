@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function DrawRectangle() {
+            var context = document.getElementById('myCanvas').getContext('2d');
+            context.beginPath();
+            context.lineWidth = "5";             // rect(x, y, rectangle-width, rectangle-height);             context.strokeRect(10, 10, 50, 100);             context.fillStyle = "Red";             context.fillRect(20, 20, 30, 50);
+
+            context.strokeStyle = "green";
+            context.strokeRect(150, 100, 100, 100);
+            context.globalAlpha = 0.5;
+            context.fillStyle = "red";
+            context.fillRect(200, 150, 100, 100);
+        }        </script>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <input type="button" onclick="DrawRectangle()" value="draw" />
+</body>
+</html>

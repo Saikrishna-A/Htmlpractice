@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>introduction</title>
+    <style>
+        body {
+            background-image: url(pic.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+    </style>
+</head>
+<body style="color:aquamarine">
+    <form action="http//www.tollplus.com" method="post">
+        <br /><br /> <br /><br /> <br /><br />
+
+
+
+        <table border="1" style="/*background-image: url(pic.jpg);*//* background-position: center;*/
+               /*background-repeat: no-repeat; background-size: cover;*/ width: 20%;border-collapse:collapse;" cellpadding="5" cellspacing="3" align="center">
+            <tr>
+                <th colspan="2">Registration Form</th>
+            </tr>
+            <tr>
+                <td>UserName:</td>
+                <td>
+                    <input type="text" name="txtname" id="textname" />
+                </td>
+            </tr>
+            <tr>
+                <td> Password:</td>
+                <td>
+                    <input type="password" name="password" id="password" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select city:
+                </td>
+                <td>
+                    <select>
+                        <option>select</option>
+                        <option>Hyderabad</option>
+                        <option>Vizag</option>
+                        <option>Vijayawada</option>
+                        <option>guntur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" />Male
+                    <input type="radio" name="gender" value="Male" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>Introduction:</td>
+                <td> <textarea rows="3" coloums="10"></textarea></td>
+            </tr>
+            <!--<tr>
+            <td> Hobbies:</td>
+            <td>
+                <select name="Hobbies" id="select1" size="5" multiple="multiple">
+                    <option value="1">cricket</option>
+                    <option value="2">drawing</option>
+                    <option value="3">chess</option>
+                    <option value="4">football</option>
+                    <option value="5">dancing</option>
+                    <option value="6">reading</option>
+                </select>
+            </td>
+        </tr>-->
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="Hobbie1" value="Football" id="Hobbie1" />
+                    <label for="Hobbie1">Football</label>
+                    <input type="checkbox" name="Hobbie2" value="Cricket" id="Hobbie2" />
+                    <label for="Hobbie2">Cricket</label>
+                    <input type="checkbox" name="Hobbie3" value="BasketBall" id="Hobbie3" />
+                    <label for="Hobbie3">BasketBall</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="sub" value="Submit" id="sub" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
